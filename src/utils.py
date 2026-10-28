@@ -1,0 +1,17 @@
+import logging
+from pathlib import Path
+
+logger = logging.getLogger(__name__)
+
+
+def setup_logging(verbose=False):
+    if verbose:
+        level = logging.DEBUG
+    else:
+        level = logging.INFO
+
+    logging.basicConfig(
+        level=level,
+        format="%(asctime)s %(levelname)-8s %(name)s — %(message)s",
+        datefmt="%H:%M:%S"
+    )
