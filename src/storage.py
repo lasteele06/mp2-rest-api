@@ -13,7 +13,7 @@ class DatasetStorage:
             "filename": filename,
         }
         logger.debug(
-            f"Stored dataset id = {self._counter}, rows = len[df]"
+            f"Stored dataset id={self._counter}, rows = len[df]"
             )
         return self._counter
         
@@ -34,7 +34,7 @@ class DatasetStorage:
             "id": dataset_id,
             "filename": dataset["filename"],
             "rows": len(df),
-            "columns" : list(df.columns),
+            "columns" : len(df.columns),
             "column_name": df.columns.tolist()
         }
         return None
