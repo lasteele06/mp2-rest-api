@@ -13,8 +13,8 @@ class DatasetStorage:
             "filename": filename,
         }
         logger.debug(
-            f"Stored dataset id={self._counter}, rows = len[df]"
-            )
+            f"Stored dataset id={self._counter}, rows = {len(df)}"
+        )
         return self._counter
         
     def get(self, dataset_id):
@@ -35,7 +35,7 @@ class DatasetStorage:
             "filename": dataset["filename"],
             "rows": len(df),
             "columns" : len(df.columns),
-            "column_name": df.columns.tolist()
+            "column_names": df.columns.tolist()
         }
         return None
     
